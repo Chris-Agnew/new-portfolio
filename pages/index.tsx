@@ -65,7 +65,7 @@ const Home = ({ pageInfo, experience, projects, skills, socials }: Props) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
+  const pageInfo: any = await fetchPageInfo();
   const experience: Experience[] = await fetchExperience();
   const projects: Project[] = await fetchProjects();
   const skills: Skill[] = await fetchSkills();
