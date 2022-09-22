@@ -17,7 +17,7 @@ const Projects = ({ projects }: Props) => {
       transition={{ duration: 1.2 }}
       viewport={{ once: true }}
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-10 md:top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
@@ -38,7 +38,7 @@ const Projects = ({ projects }: Props) => {
                 className="rounded-sm object-cover "
               />
               <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                <h4 className="text-4xl font-semibold text-center">
+                <h4 className="text-lg md:text-4xl font-semibold text-center">
                   <a
                     href={project.linkToBuild}
                     target="_blank"

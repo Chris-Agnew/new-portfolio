@@ -9,7 +9,7 @@ type Props = {
 
 const ExperienceCard = ({ exp }: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden snap-center">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[360px] md:w-[600px] xl:w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden snap-center">
       <motion.img
         initial={{
           opacity: 0,
@@ -28,8 +28,8 @@ const ExperienceCard = ({ exp }: Props) => {
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
       />
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">{exp.jobTitle}</h4>
-        <p className="font-light text-2xl mt-1">{exp.company}</p>
+        <h4 className="text-xl md:text-4xl font-light">{exp.jobTitle}</h4>
+        <p className="font-light text-lg md:text-2xl mt-1">{exp.company}</p>
         <div className="flex space-x-2 my-2">
           {exp.technologies.map((tech) => (
             <Image
