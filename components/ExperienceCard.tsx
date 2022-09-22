@@ -23,7 +23,7 @@ const ExperienceCard = ({ exp }: Props) => {
           y: 0,
         }}
         viewport={{ once: true }}
-        src="/images/chris-profile.jpg"
+        src={urlFor(exp.companyImage).url()}
         alt=""
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
       />
