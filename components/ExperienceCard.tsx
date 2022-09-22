@@ -9,7 +9,7 @@ type Props = {
 
 const ExperienceCard = ({ exp }: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden snap-center">
       <motion.img
         initial={{
           opacity: 0,
@@ -43,12 +43,19 @@ const ExperienceCard = ({ exp }: Props) => {
           ))}
         </div>
         <p className="uppercase py-5 text-gray-300">
-          {new Date(exp.dateStarted).toLocaleDateString()} -
+          {new Date(exp.dateStarted).toLocaleDateString("en-us", {
+            year: "numeric",
+            month: "short",
+          })}
+          -
           {exp.isCurrentlyWorkingHere
             ? "Present"
-            : new Date(exp.dateEnded).toLocaleDateString()}
+            : new Date(exp.dateEnded).toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "short",
+              })}
         </p>
-        <ul className="list-disc space-y4 ml-5 text-lg">
+        <ul className="list-disc space-y-4 ml-5 text-lg">
           {exp.points &&
             exp.points.map((point: string, i: number) => (
               <li key={i}>{point}</li>
