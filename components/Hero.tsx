@@ -15,7 +15,7 @@ const Hero = ({ pageInfo }: Props) => {
       `Hi, My Name is ${pageInfo?.name}`,
       "Next.js Developer",
       "Tailwind CSS Lover",
-      "I'm a Philomath",
+      "TypeScript enthusiast",
     ],
     loop: true,
     delaySpeed: 2000,
