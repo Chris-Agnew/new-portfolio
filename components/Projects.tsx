@@ -9,7 +9,6 @@ type Props = {
 };
 
 const Projects = ({ projects }: Props) => {
-  console.log(projects);
   return (
     <motion.div
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-fulll justify-evenly mx-auto items-center z-0"

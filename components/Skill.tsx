@@ -9,7 +9,6 @@ type Props = {
 };
 
 const Skill = ({ skill, directionLeft }: Props) => {
-  console.log(skill);
   return (
     <div className="group relative flex cursor-pointer">
       <motion.img
