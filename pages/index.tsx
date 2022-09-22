@@ -9,11 +9,6 @@ import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
-import { fetchExperience } from "../utils/fetchExperience";
-import { fetchProjects } from "../utils/fetchProjects";
-import { fetchSkills } from "../utils/fetchSkills";
-import { fetchSocials } from "../utils/fetchSocials";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { sanityClient } from "../sanity";
 import { groq } from "next-sanity";
 
