@@ -32,7 +32,7 @@ const Hero = ({ pageInfo }: Props) => {
         className="rounded-full relative h-32 w-32 mx-auto object-cover"
       />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+        <h2 className="text-xs md:text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h2>
         <h1 className="text-xl lg:text-6xl font-semibold px-10">
