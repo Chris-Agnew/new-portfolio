@@ -18,7 +18,7 @@ const Contact = (props: Props) => {
         <div className="space-y-10">
           <div className="flex justify-center items-center space-x-5">
             <MapPinIcon className="text-[#F7Ab0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">Willowick, Ohio</p>
+            <p className="text-2xl">Fredericksburg, VA</p>
           </div>
           <div className="flex justify-center items-center space-x-5">
             <EnvelopeIcon className="text-[#F7Ab0A] h-7 w-7 animate-pulse" />
