@@ -1,5 +1,5 @@
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import Calendly from "./Calendly";
 
 type Props = {};
 
@@ -27,6 +27,7 @@ const Contact = (props: Props) => {
               <a href="mailto:hello@chrisagnew.codes">hello@chrisagnew.codes</a>{" "}
             </p>
           </div>
+          <Calendly url="https://calendly.com/chris-agnew-1/30min" />
         </div>
       </div>
     </div>

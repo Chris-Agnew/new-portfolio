@@ -54,6 +54,7 @@ const Home = ({ pageInfo, experience, projects, skills, socials }: Props) => {
       <section id="contact">
         <Contact />
       </section>
+
       <Footer />
     </div>
   );
