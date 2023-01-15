@@ -1,6 +1,5 @@
 import { MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import Calendly from "./Calendly";
-
 type Props = {};
 
 const Contact = (props: Props) => {
