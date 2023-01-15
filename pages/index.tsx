@@ -23,7 +23,7 @@ type Props = {
 
 const Home = ({ pageInfo, experience, projects, skills, socials }: Props) => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 font-nunito-sans">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen  overflow-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 font-nunito-sans">
       <Seo
         title="Chris Agnew | Next.js and Tailwind CSS Developer"
         description="Chris Agnew is a Full-Stack Developer based out of Cleveland, Ohio. He specializes in making sites and apps with Next.js and Tailwind CSS"
@@ -31,27 +31,27 @@ const Home = ({ pageInfo, experience, projects, skills, socials }: Props) => {
 
       <Header socials={socials} />
 
-      <section id="hero" className="snap-start">
+      <section id="hero">
         <Hero pageInfo={pageInfo} />
       </section>
 
-      <section id="about" className="snap-center">
+      <section id="about">
         <About pageInfo={pageInfo} />
       </section>
 
-      <section id="experience" className="snap-center">
+      <section id="experience">
         <WorkExperience experience={experience} />
       </section>
 
-      <section id="skills" className="snap-start">
+      <section id="skills">
         <Skills skills={skills} />
       </section>
 
-      <section id="projects" className="snap-start">
+      <section id="projects">
         <Projects projects={projects} />
       </section>
 
-      <section id="contact" className="snap-start">
+      <section id="contact">
         <Contact />
       </section>
       <Footer />
