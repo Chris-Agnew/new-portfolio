@@ -11,31 +11,40 @@ type Props = {
 const Projects = ({ projects }: Props) => {
   return (
     <motion.div
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-fulll justify-evenly mx-auto items-center z-0"
+      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
       initial={{ opacity: 0, y: -300 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2 }}
       viewport={{ once: true }}
+      role="region"
+      aria-labelledby="projects-heading"
     >
-      <h3 className="absolute top-10 md:top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3
+        id="projects-heading"
+        className="absolute top-10 md:top-24 uppercase tracking-[20px] text-gray-500 text-2xl"
+      >
         Projects
       </h3>
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden  z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
+        role="list"
+        aria-label="List of projects"
+      >
         {projects
-          .sort((a, b) => {
-            return a._createdAt > b._createdAt ? -1 : 1;
-          })
+          .sort((a, b) => (a._createdAt > b._createdAt ? -1 : 1))
           .map((project, i) => (
             <div
               className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
               key={i}
+              role="listitem"
+              aria-label={`Project ${i + 1}: ${project.title}`}
             >
               <Image
                 src={urlFor(project.image).url()}
-                alt=""
+                alt={project.title}
                 width={500}
                 height={300}
-                className="rounded-sm object-cover "
+                className="rounded-sm object-cover"
               />
               <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                 <h4 className="text-lg md:text-4xl font-semibold text-center">
@@ -43,25 +52,25 @@ const Projects = ({ projects }: Props) => {
                     href={project.linkToBuild}
                     target="_blank"
                     rel="noreferrer"
+                    className="underline decoration-[#F7AB0A]/50"
+                    aria-label={`Link to case study for project ${i + 1}`}
                   >
-                    <span className="underline decoration-[#F7AB0A]/50">
-                      Case Study {i + 1} of {projects.length} : {project.title}
-                    </span>
+                    Case Study {i + 1} of {projects.length} : {project.title}
                   </a>
                 </h4>
                 <div className="flex justify-center items-center">
-                  {project?.technologies.map((tech, i) => (
+                  {project?.technologies.map((tech) => (
                     <Image
                       src={urlFor(tech.image).url()}
-                      alt=""
+                      alt={tech.title}
                       width={50}
                       height={50}
                       key={tech._id}
                       className="h-5 w-5 space-x-2 px-2 mx-2"
+                      aria-label={tech.title}
                     />
                   ))}
                 </div>
-
                 <p className="text-lg text-center md:text-left">
                   {project.summary}
                 </p>
