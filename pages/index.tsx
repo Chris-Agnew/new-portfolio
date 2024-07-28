@@ -27,7 +27,7 @@ const Home = ({ pageInfo, experience, projects, socials }: Props) => {
       </Head>
       <div className="bg-[rgb(36,36,36)] text-white h-screen overflow-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 font-nunito-sans">
         <Seo
-          title="Chris Agnew | Next.js and Tailwind CSS Developer"
+          title="Chris Agnew | Full-Stack React Developer"
           description="Chris Agnew is a Full-Stack Developer based out of Cleveland, Ohio. He specializes in making sites and apps with Next.js and Tailwind CSS"
         />
 
