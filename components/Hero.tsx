@@ -1,6 +1,5 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { PageInfo } from "../typings";
@@ -15,14 +14,18 @@ const Hero = ({ pageInfo }: Props) => {
       `Hi, My Name is ${pageInfo?.name}`,
       "Next.js Developer",
       "Tailwind CSS Lover",
-      "TypeScript enthusiast",
+      "TypeScript Advocate",
     ],
     loop: true,
     delaySpeed: 2000,
   });
 
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div
+      className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden"
+      role="region"
+      aria-labelledby="hero-heading"
+    >
       <BackgroundCircles />
       <Image
         src="/images/chris-profile.jpg"
@@ -32,7 +35,10 @@ const Hero = ({ pageInfo }: Props) => {
         className="rounded-full relative h-32 w-32 mx-auto object-cover"
       />
       <div className="z-20">
-        <h2 className="text-xs md:text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+        <h2
+          id="hero-heading"
+          className="text-xs md:text-sm uppercase text-gray-500 pb-2 tracking-[15px]"
+        >
           {pageInfo?.role}
         </h2>
         <h1 className="text-xl lg:text-6xl font-semibold px-10">
@@ -41,16 +47,24 @@ const Hero = ({ pageInfo }: Props) => {
         </h1>
         <div className="pt-5">
           <Link href="#about">
-            <button className="heroButton">About</button>
+            <button className="heroButton" aria-label="About section">
+              About
+            </button>
           </Link>
           <Link href="#experience">
-            <button className="heroButton">Experience</button>
+            <button className="heroButton" aria-label="Experience section">
+              Experience
+            </button>
           </Link>
           <Link href="#skills">
-            <button className="heroButton">Skills</button>
+            <button className="heroButton" aria-label="Skills section">
+              Skills
+            </button>
           </Link>
           <Link href="#projects">
-            <button className="heroButton">Projects</button>
+            <button className="heroButton" aria-label="Projects section">
+              Projects
+            </button>
           </Link>
         </div>
       </div>
