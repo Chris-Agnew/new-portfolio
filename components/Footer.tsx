@@ -10,7 +10,7 @@ const Footer = () => {
       >
         <div className="flex justify-center items-center">
           <Image
-            src="/images/chris-agnew-logo.png"
+            src="/images/chris-agnew-logo.webp"
             height={50}
             width={50}
             alt="Chris Agnew logo"

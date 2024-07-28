@@ -23,7 +23,7 @@ const About = ({ pageInfo }: Props) => {
       </h3>
 
       <motion.img
-        src="/images/chris-arv.jpg"
+        src="/images/chris-arv.webp"
         initial={{
           x: -200,
           opacity: 0,
