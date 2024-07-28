@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-type Props = {};
 
-const BackgroundCircles = (props: Props) => {
+const BackgroundCircles = () => {
   return (
     <motion.div
       className="relative flex justify-center items-center"
@@ -16,6 +15,7 @@ const BackgroundCircles = (props: Props) => {
       transition={{
         duration: 2.5,
       }}
+      aria-hidden="true"
     >
       <div className="absolute border border-[#333333] rounded-full h-[200px] w-[200px] mt-52 animate-ping" />
       <div className="absolute border border-[#333333] rounded-full h-[300px] w-[300px] mt-52 " />
