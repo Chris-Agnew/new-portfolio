@@ -9,7 +9,10 @@ type Props = {
 
 const Header = ({ socials }: Props) => {
   return (
-    <header className=" md:sticky top-0 p-5 flex justify-between  max-w-7xl mx-auto z-20 items-start xl:items-center">
+    <header
+      className="md:sticky top-0 p-5 flex justify-between max-w-7xl mx-auto z-20 items-start xl:items-center"
+      role="banner"
+    >
       <motion.div
         className="flex flex-row items-center"
         initial={{
@@ -32,6 +35,7 @@ const Header = ({ socials }: Props) => {
             fgColor="gray"
             bgColor="transparent"
             key={social._id}
+            aria-label={`Link to ${social.title}`}
           />
         ))}
       </motion.div>
@@ -51,12 +55,14 @@ const Header = ({ socials }: Props) => {
           transition={{
             duration: 1.5,
           }}
+          aria-label="Contact section"
         >
           <SocialIcon
             className="cursor-pointer"
             network="email"
             fgColor="gray"
             bgColor="transparent"
+            aria-label="Email"
           />
 
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
