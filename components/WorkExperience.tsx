@@ -1,12 +1,17 @@
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Experience } from "../typings";
 import ExperienceCard from "./ExperienceCard";
+import { useDraggable } from "react-use-draggable-scroll";
 
 type Props = {
   experience: Experience[];
 };
 
 const WorkExperience = ({ experience }: Props) => {
+  const ref =
+    useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
+  const { events } = useDraggable(ref);
   return (
     <motion.div
       className="h-screen flex relative overflow-auto flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center"
@@ -25,7 +30,8 @@ const WorkExperience = ({ experience }: Props) => {
       <div
         className="w-full flex space-x-5  p-10 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
         role="list"
-        aria-label="Work experience timeline"
+        {...events}
+        ref={ref}
       >
         {experience
           .sort((a, b) => {

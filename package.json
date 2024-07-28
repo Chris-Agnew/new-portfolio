@@ -22,7 +22,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.35.0",
     "react-simple-typewriter": "^4.0.2",
-    "react-social-icons": "^5.14.0"
+    "react-social-icons": "^5.14.0",
+    "react-use-draggable-scroll": "^0.4.7"
   },
   "devDependencies": {
     "@types/node": "18.7.18",

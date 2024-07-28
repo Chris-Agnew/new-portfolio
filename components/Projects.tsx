@@ -1,14 +1,18 @@
-import React from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Project } from "../typings";
 import { urlFor } from "../sanity";
+import { useDraggable } from "react-use-draggable-scroll";
 
 type Props = {
   projects: Project[];
 };
 
 const Projects = ({ projects }: Props) => {
+  const ref =
+    useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
+  const { events } = useDraggable(ref); // Now we pass the reference to the useDraggable hook:
   return (
     <motion.div
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
@@ -28,7 +32,8 @@ const Projects = ({ projects }: Props) => {
       <div
         className="relative w-full flex overflow-x-scroll overflow-y-hidden z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
         role="list"
-        aria-label="List of projects"
+        {...events}
+        ref={ref}
       >
         {projects
           .sort((a, b) => (a._updatedAt > b._updatedAt ? -1 : 1))
