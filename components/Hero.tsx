@@ -28,7 +28,7 @@ const Hero = ({ pageInfo }: Props) => {
     >
       <BackgroundCircles />
       <Image
-        src="/images/chris-profile.jpg"
+        src="/images/chris-profile.webp"
         priority
         width={200}
         height={200}
@@ -38,7 +38,7 @@ const Hero = ({ pageInfo }: Props) => {
       <div className="z-20">
         <h2
           id="hero-heading"
-          className="text-xs md:text-sm uppercase text-gray-500 pb-2 tracking-[15px]"
+          className="text-xs md:text-sm uppercase text-gray-100 pb-2 tracking-[15px]"
         >
           {pageInfo?.role}
         </h2>

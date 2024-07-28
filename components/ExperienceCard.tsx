@@ -11,8 +11,8 @@ const ExperienceCard = ({ exp }: Props) => {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[360px] md:w-[600px] xl:w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 h-full overflow-y-auto"
-      role="region"
       aria-labelledby={`experience-${exp._id}-title`}
+      role="article"
     >
       <motion.img
         initial={{
@@ -41,7 +41,11 @@ const ExperienceCard = ({ exp }: Props) => {
         <p className="font-light text-sm md:text-2xl mt-1 text-center">
           {exp.company}
         </p>
-        <div className="flex justify-center space-x-2 my-2">
+        <div
+          className="flex justify-center space-x-2 my-2"
+          role="group"
+          aria-label="Technologies used"
+        >
           {exp.technologies.map((tech) => (
             <span key={tech._id} className="px-2">
               <Image
@@ -50,7 +54,6 @@ const ExperienceCard = ({ exp }: Props) => {
                 height={50}
                 alt={tech.title}
                 className="object-contain object-center"
-                aria-label={tech.title}
               />
             </span>
           ))}
@@ -68,10 +71,12 @@ const ExperienceCard = ({ exp }: Props) => {
                 month: "short",
               })}
         </p>
-        <ul className="list-disc space-y-4 ml-5 md:text-lg">
+        <ul className="list-disc space-y-4 ml-5 md:text-lg" role="list">
           {exp.points &&
             exp.points.map((point: string, i: number) => (
-              <li key={i}>{point}</li>
+              <li key={i} role="listitem">
+                {point}
+              </li>
             ))}
         </ul>
       </div>
