@@ -31,7 +31,7 @@ const Projects = ({ projects }: Props) => {
         aria-label="List of projects"
       >
         {projects
-          .sort((a, b) => (a._createdAt > b._createdAt ? -1 : 1))
+          .sort((a, b) => (a._updatedAt > b._updatedAt ? -1 : 1))
           .map((project, i) => (
             <div
               className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
@@ -46,7 +46,7 @@ const Projects = ({ projects }: Props) => {
                 height={300}
                 className="rounded-sm object-cover"
               />
-              <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+              <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-7xl">
                 <h4 className="text-lg md:text-4xl font-semibold text-center">
                   <a
                     href={project.linkToBuild}
@@ -60,20 +60,22 @@ const Projects = ({ projects }: Props) => {
                 </h4>
                 <div className="flex justify-center items-center">
                   {project?.technologies.map((tech) => (
-                    <Image
-                      src={urlFor(tech.image).url()}
-                      alt={tech.title}
-                      width={50}
-                      height={50}
-                      key={tech._id}
-                      className="h-5 w-5 space-x-2 px-2 mx-2"
-                      aria-label={tech.title}
-                    />
+                    <span key={tech._id} className="px-2">
+                      <Image
+                        src={urlFor(tech.image).url()}
+                        alt={tech.title}
+                        width={50}
+                        height={50}
+                        aria-label={tech.title}
+                      />
+                    </span>
                   ))}
                 </div>
-                <p className="text-lg text-center md:text-left">
-                  {project.summary}
-                </p>
+                {project.summary.split("\n").map((text, index) => (
+                  <p className="text-xs md:text-lg md:text-left" key={index}>
+                    {text}
+                  </p>
+                ))}
               </div>
             </div>
           ))}

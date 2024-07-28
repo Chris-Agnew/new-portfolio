@@ -10,7 +10,7 @@ type Props = {
 const ExperienceCard = ({ exp }: Props) => {
   return (
     <article
-      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[360px] md:w-[600px] xl:w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden"
+      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[360px] md:w-[600px] xl:w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 h-full overflow-y-auto"
       role="region"
       aria-labelledby={`experience-${exp._id}-title`}
     >
@@ -29,30 +29,33 @@ const ExperienceCard = ({ exp }: Props) => {
         viewport={{ once: true }}
         src={urlFor(exp.companyImage).url()}
         alt={`${exp.company} logo`}
-        className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover xl:object-contain object-center"
       />
       <div className="px-0 md:px-10">
         <h4
           id={`experience-${exp._id}-title`}
-          className="text-xl md:text-4xl font-light"
+          className="text-md md:text-4xl font-semibold text-center"
         >
           {exp.jobTitle}
         </h4>
-        <p className="font-light text-lg md:text-2xl mt-1">{exp.company}</p>
-        <div className="flex space-x-2 my-2">
+        <p className="font-light text-sm md:text-2xl mt-1 text-center">
+          {exp.company}
+        </p>
+        <div className="flex justify-center space-x-2 my-2">
           {exp.technologies.map((tech) => (
-            <Image
-              key={tech._id}
-              src={urlFor(tech.image).url()}
-              width={50}
-              height={50}
-              alt={tech.title}
-              className="object-cover object-center px-3"
-              aria-label={tech.title}
-            />
+            <span key={tech._id} className="px-2">
+              <Image
+                src={urlFor(tech.image).url()}
+                width={50}
+                height={50}
+                alt={tech.title}
+                className="object-contain object-center"
+                aria-label={tech.title}
+              />
+            </span>
           ))}
         </div>
-        <p className="uppercase py-5 text-gray-300">
+        <p className="uppercase py-5 text-center text-gray-300">
           {new Date(exp.dateStarted).toLocaleDateString("en-us", {
             year: "numeric",
             month: "short",
@@ -65,7 +68,7 @@ const ExperienceCard = ({ exp }: Props) => {
                 month: "short",
               })}
         </p>
-        <ul className="list-disc space-y-4 ml-5 text-lg">
+        <ul className="list-disc space-y-4 ml-5 md:text-lg">
           {exp.points &&
             exp.points.map((point: string, i: number) => (
               <li key={i}>{point}</li>

@@ -3,16 +3,14 @@ import { MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 const Contact = () => {
   return (
     <div
-      className="relative h-screen flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 xl:my-10 justify-evenly mx-auto items-center"
       role="form"
       aria-labelledby="contact-heading"
     >
-      <div className="flex flex-col space-y-10">
-        <h4 id="contact-heading" className="text-4xl font-semibold text-center">
+      <div className="flex flex-col space-y-10 ">
+        <h4 id="contact-heading" className="text-4xl font-semibold">
           Have a project you&apos;d like to discuss?
-          <span className="decoration-[#F7AB0A]/50 underline px-2">
-            Let&apos;s Talk.
-          </span>
+          <br />
         </h4>
         <div className="space-y-10">
           <div className="flex justify-center items-center space-x-5">

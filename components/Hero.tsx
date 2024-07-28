@@ -29,6 +29,7 @@ const Hero = ({ pageInfo }: Props) => {
       <BackgroundCircles />
       <Image
         src="/images/chris-profile.jpg"
+        priority
         width={200}
         height={200}
         alt="Chris Agnew headshot"

@@ -10,7 +10,7 @@ type Props = {
 const Header = ({ socials }: Props) => {
   return (
     <header
-      className="md:sticky top-0 p-5 flex justify-between max-w-7xl mx-auto z-20 items-start xl:items-center"
+      className=" top-0 p-5 flex justify-between max-w-7xl mx-auto z-20 items-start xl:items-center"
       role="banner"
     >
       <motion.div
