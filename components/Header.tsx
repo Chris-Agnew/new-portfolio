@@ -32,44 +32,43 @@ const Header = ({ socials }: Props) => {
         {socials.map((social) => (
           <SocialIcon
             url={social.link}
-            fgColor="gray"
+            fgColor="white"
             bgColor="transparent"
             key={social._id}
             aria-label={`Link to ${social.title}`}
           />
         ))}
       </motion.div>
-      <Link href="#contact">
-        <motion.div
-          className="flex flex-row items-center text-gray-300 cursor-pointer"
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 1.5,
-          }}
-          aria-label="Contact section"
-        >
-          <SocialIcon
-            className="cursor-pointer"
-            network="email"
-            fgColor="gray"
-            bgColor="transparent"
-            aria-label="Email"
-          />
-
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+      <motion.div
+        className="flex flex-row items-center text-gray-300 cursor-pointer"
+        initial={{
+          x: 500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        aria-label="Contact section"
+      >
+        <SocialIcon
+          className="cursor-pointer"
+          network="email"
+          fgColor="white"
+          bgColor="transparent"
+          aria-label="Email"
+        />
+        <Link href="#contact">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-100">
             Get in Touch
           </p>
-        </motion.div>
-      </Link>
+        </Link>
+      </motion.div>
     </header>
   );
 };
