@@ -1,8 +1,39 @@
-  <xml version="1.0" encoding="UTF-8">
-   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <url>
-       <loc>https://chrisangew.codes</loc>
-       <lastmod>2024-07-29</lastmod>
-     </url>
-   </urlset>
-   </xml>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://chrisagnew.codes/</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://chrisagnew.codes/#about</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chrisagnew.codes/#experience</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chrisagnew.codes/#skills</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chrisagnew.codes/#projects</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://chrisagnew.codes/#contact</loc>
+    <lastmod>2024-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
