@@ -16,7 +16,7 @@ Portfolio site showing my recent projects and work experience
 [Framer Motion](https://www.framer.com/motion)\
 [Next SEO](https://github.com/garmeeh/next-seo)\
 [React Social Icons](https://www.npmjs.com/package/react-social-icons)\
-[Google Analytics 4](analytics.google.com)
+[Google Analytics 4](https://analytics.google.com)
 
 ## Authors
 
