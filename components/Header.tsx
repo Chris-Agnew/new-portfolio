@@ -58,16 +58,16 @@ const Header = ({ socials }: Props) => {
       >
         <SocialIcon
           className="cursor-pointer"
-          network="email"
           fgColor="white"
           bgColor="transparent"
           aria-label="Email"
+          network="email"
+          url="#contact"
         />
-        <Link href="#contact">
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-100">
-            Get in Touch
-          </p>
-        </Link>
+
+        <p className="uppercase hidden md:inline-flex text-sm text-gray-100">
+          Get in Touch
+        </p>
       </motion.div>
     </header>
   );
