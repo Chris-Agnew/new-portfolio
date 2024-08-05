@@ -20,7 +20,6 @@ const WorkExperience = ({ experience }: Props) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      role="region"
       aria-labelledby="experience-heading"
     >
       <h3
@@ -31,14 +30,14 @@ const WorkExperience = ({ experience }: Props) => {
       </h3>
       <div
         className="relative w-full flex overflow-x-scroll overflow-y-hidden z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
-        role="list"
         {...events}
         ref={ref}
+        role="list"
       >
         {experience
           .sort((a, b) => (a._updatedAt > b._updatedAt ? -1 : 1))
-          .map((exp) => (
-            <ExperienceCard key={exp._id} exp={exp} />
+          .map((exp, index) => (
+            <ExperienceCard key={exp._id} exp={exp} position={index + 1} />
           ))}
       </div>
     </motion.div>

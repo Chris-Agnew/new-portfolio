@@ -35,7 +35,7 @@ const Header = ({ socials }: Props) => {
             fgColor="white"
             bgColor="transparent"
             key={social._id}
-            aria-label={`Link to ${social.title}`}
+            label={`Link to ${social.title}`}
           />
         ))}
       </motion.div>
@@ -60,15 +60,12 @@ const Header = ({ socials }: Props) => {
           className="cursor-pointer"
           fgColor="white"
           bgColor="transparent"
-          aria-label="hidden"
+          label="Click to be directed to contact information"
           network="email"
           url="#contact"
         />
-        <Link href="#contact">
-          <p
-            className="uppercase hidden md:inline-flex text-sm text-gray-100"
-            aria-label="Get in Touch"
-          >
+        <Link href="#contact" aria-label="Get in Touch">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-100">
             Get in Touch
           </p>
         </Link>
