@@ -9,9 +9,11 @@ type Props = {
 };
 
 const WorkExperience = ({ experience }: Props) => {
-  const ref =
-    useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
-  const { events } = useDraggable(ref);
+  const ref = useRef<HTMLDivElement>(null);
+  const { events } = useDraggable(
+    ref as React.MutableRefObject<HTMLDivElement>
+  );
+
   return (
     <motion.div
       className="h-screen flex relative overflow-auto flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center"
@@ -35,8 +37,8 @@ const WorkExperience = ({ experience }: Props) => {
       >
         {experience
           .sort((a, b) => (a._updatedAt > b._updatedAt ? -1 : 1))
-          .map((experience) => (
-            <ExperienceCard key={experience._id} exp={experience} />
+          .map((exp) => (
+            <ExperienceCard key={exp._id} exp={exp} />
           ))}
       </div>
     </motion.div>
