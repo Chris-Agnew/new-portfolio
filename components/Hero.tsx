@@ -57,11 +57,6 @@ const Hero = ({ pageInfo }: Props) => {
               Experience
             </button>
           </Link>
-          <Link href="#skills">
-            <button className="heroButton" aria-label="Skills section">
-              Skills
-            </button>
-          </Link>
           <Link href="#projects">
             <button className="heroButton" aria-label="Projects section">
               Projects
