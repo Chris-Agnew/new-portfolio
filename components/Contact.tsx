@@ -41,7 +41,7 @@ const Contact = () => {
             />
             <p className="text-2xl">
               <a href="tel:4405306474" aria-label="Call or Text Chris Agnew">
-                (440) 530-6474 Call or Text
+                (440) 530-6474 Call/Text
               </a>
             </p>
           </div>
