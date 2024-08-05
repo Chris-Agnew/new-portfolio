@@ -11,6 +11,7 @@ import { Experience, PageInfo, Project, Social } from "../typings";
 import { sanityClient } from "../sanity";
 import { groq } from "next-sanity";
 import Footer from "../components/Footer";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 type Props = {
   pageInfo: PageInfo;
@@ -22,6 +23,8 @@ type Props = {
 const Home = ({ pageInfo, experience, projects, socials }: Props) => {
   return (
     <>
+      <GoogleTagManager gtmId="GTM-M9J75R27" />
+
       <Seo
         title="Chris Agnew | Full-Stack React Developer | TypeScript, Next.js, Tailwind CSS, Node.js Expert"
         description="Discover Chris Agnew, a Full-Stack React Developer based in Cleveland, Ohio. Specializing in TypeScript, Next.js, Tailwind CSS, and Node.js, Chris creates exceptional websites and applications that are user friendly and fully accessible."
