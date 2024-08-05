@@ -54,6 +54,7 @@ const ExperienceCard = ({ exp }: Props) => {
                 height={50}
                 alt={tech.title}
                 className="object-contain object-center"
+                loading="lazy"
               />
             </span>
           ))}

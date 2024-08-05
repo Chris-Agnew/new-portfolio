@@ -72,6 +72,7 @@ const Projects = ({ projects }: Props) => {
                         width={50}
                         height={50}
                         aria-label={tech.title}
+                        loading="lazy"
                       />
                     </span>
                   ))}
