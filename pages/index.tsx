@@ -22,15 +22,12 @@ type Props = {
 const Home = ({ pageInfo, experience, projects, socials }: Props) => {
   return (
     <>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Seo
+        title="Chris Agnew | Full-Stack React Developer | TypeScript, Next.js, Tailwind CSS, Node.js Expert"
+        description="Discover Chris Agnew, a Full-Stack React Developer based in Cleveland, Ohio. Specializing in TypeScript, Next.js, Tailwind CSS, and Node.js, Chris creates exceptional websites and applications that are user friendly and fully accessible."
+      />
+      <link rel="icon" href="/favicon.ico" />
       <div className="bg-[rgb(36,36,36)] text-white h-screen overflow-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 font-nunito-sans">
-        <Seo
-          title="Chris Agnew | Full-Stack React Developer"
-          description="Chris Agnew is a Full-Stack Developer based out of Cleveland, Ohio. He specializes in making sites and apps with Next.js and Tailwind CSS"
-        />
-
         <Header socials={socials} />
 
         <main>

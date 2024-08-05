@@ -12,19 +12,19 @@ const Seo = ({ title, description }: Props) => {
       description={description}
       canonical="https://chrisagnew.codes"
       openGraph={{
-        url: "https:/chrisagnew.codes",
-        title: "Chris Agnew | Next.js and Tailwind CSS Developer",
+        url: "https://chrisagnew.codes",
+        title: title,
         description: description,
         images: [
           {
-            url: "/images/chris-agnew-logo.webp",
+            url: "/images/chris-agnew-llc-og.webp",
             width: 800,
             height: 600,
-            alt: "Chris Agnew Logo",
+            alt: "Chris Agnew LLC Company Logo",
             type: "image/jpeg",
           },
         ],
-        site_name: "Chris Agnew",
+        site_name: "Chris Agnew LLC | Full-Stack React Developer",
       }}
       twitter={{
         handle: "@handle",
