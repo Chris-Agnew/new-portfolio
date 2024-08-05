@@ -1,25 +1,46 @@
-import Image from "next/image";
 import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <Link href="#hero">
-      <footer
-        className="sticky bottom-5 w-full cursor-pointer"
-        role="contentinfo"
-      >
-        <div className="flex justify-center items-center">
-          <Image
-            src="/images/chris-agnew-logo.webp"
-            height={50}
-            width={50}
-            alt="Chris Agnew logo"
-            className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer object-cover"
-            aria-label="Back to top"
-          />
+    <footer
+      className="bg-[rgb(36,36,36)] text-white py-4 mt-8"
+      role="contentinfo"
+    >
+      <div className="container mx-auto flex flex-col justify-center items-center">
+        <div className="flex items-center space-x-4 mb-4 md:mb-0">
+          <Link
+            href="https://github.com/chris-agnew"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <FaGithub size={24} />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/chris-agnew12/"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <FaLinkedin size={24} />
+          </Link>
+          <Link
+            href="/privacy"
+            className="text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Privacy Policy
+          </Link>
         </div>
-      </footer>
-    </Link>
+        <div className="text-sm text-center md:text-right mt-4">
+          &copy; {year} Chris Agnew LLC. All rights reserved.
+        </div>
+      </div>
+    </footer>
   );
 };
 
