@@ -18,8 +18,8 @@ const Seo = ({ title, description }: Props) => {
         images: [
           {
             url: "/images/chris-agnew-llc-og.webp",
-            width: 800,
-            height: 600,
+            width: 1200,
+            height: 630,
             alt: "Chris Agnew LLC Company Logo",
             type: "image/jpeg",
           },
