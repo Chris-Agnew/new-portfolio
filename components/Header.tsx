@@ -64,10 +64,11 @@ const Header = ({ socials }: Props) => {
           network="email"
           url="#contact"
         />
-
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-100">
-          Get in Touch
-        </p>
+        <Link href="#contact">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-100">
+            Get in Touch
+          </p>
+        </Link>
       </motion.div>
     </header>
   );
