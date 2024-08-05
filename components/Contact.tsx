@@ -1,4 +1,4 @@
-import { MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { MapPinIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 const Contact = () => {
   return (
@@ -31,6 +31,17 @@ const Contact = () => {
                 aria-label="Email Chris Agnew"
               >
                 hello@chrisagnew.codes
+              </a>
+            </p>
+          </div>
+          <div className="flex justify-center items-center space-x-5">
+            <PhoneIcon
+              className="text-[#F7Ab0A] h-7 w-7 animate-pulse"
+              aria-hidden="true"
+            />
+            <p className="text-2xl">
+              <a href="tel:4405306474" aria-label="Call or Text Chris Agnew">
+                (440) 530-6474 Call or Text
               </a>
             </p>
           </div>
