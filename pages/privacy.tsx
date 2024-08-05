@@ -85,7 +85,7 @@ const PrivacyPolicy: React.FC = () => {
           </p>
           <p className="mb-4">
             If you experience any difficulty in accessing any part of this
-            website, please feel free to call me at{" "}
+            website, please feel free to call/text me at{" "}
             <Link className="text-purple-600 underline" href="tel:4405306474">
               (440) 530-6474
             </Link>{" "}
