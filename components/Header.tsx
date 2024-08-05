@@ -60,12 +60,15 @@ const Header = ({ socials }: Props) => {
           className="cursor-pointer"
           fgColor="white"
           bgColor="transparent"
-          aria-label="Email"
+          aria-label="hidden"
           network="email"
           url="#contact"
         />
         <Link href="#contact">
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-100">
+          <p
+            className="uppercase hidden md:inline-flex text-sm text-gray-100"
+            aria-label="Get in Touch"
+          >
             Get in Touch
           </p>
         </Link>
