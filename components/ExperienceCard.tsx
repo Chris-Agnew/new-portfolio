@@ -10,13 +10,13 @@ type Props = {
 
 const ExperienceCard = ({ exp, position }: Props) => {
   return (
-    <article
-      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[360px] md:w-[600px] xl:w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 h-full overflow-y-auto"
+    <div
+      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-full max-w-[360px] md:max-w-[600px] xl:max-w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 min-h-[500px] md:min-h-[600px] xl:min-h-[700px] overflow-auto mx-4"
       aria-labelledby={`experience-${exp._id}-title`}
       aria-posinset={position}
       role="listitem"
     >
-      <motion.img
+      <motion.div
         initial={{
           opacity: 0,
           y: -100,
@@ -29,10 +29,18 @@ const ExperienceCard = ({ exp, position }: Props) => {
           y: 0,
         }}
         viewport={{ once: true }}
-        src={urlFor(exp.companyImage).url()}
-        alt={`${exp.company} logo`}
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover xl:object-contain object-center"
-      />
+      >
+        <Image
+          src={urlFor(exp.companyImage).url()}
+          alt={`${exp.company} logo`}
+          width={200}
+          height={200}
+          className="object-fill object-center rounded-full "
+          loading="lazy"
+          quality={100}
+        />
+      </motion.div>
       <div className="px-0 md:px-10">
         <h4
           id={`experience-${exp._id}-title`}
@@ -83,7 +91,7 @@ const ExperienceCard = ({ exp, position }: Props) => {
             ))}
         </ul>
       </div>
-    </article>
+    </div>
   );
 };
 

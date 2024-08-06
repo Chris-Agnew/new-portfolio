@@ -29,13 +29,14 @@ const WorkExperience = ({ experience }: Props) => {
         Experience
       </h3>
       <div
-        className="relative w-full flex overflow-x-scroll overflow-y-hidden z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 "
         {...events}
         ref={ref}
         role="list"
       >
         {experience
-          .sort((a, b) => (a._updatedAt > b._updatedAt ? -1 : 1))
+          .sort((a, b) => a.position - b.position)
+
           .map((exp, index) => (
             <ExperienceCard key={exp._id} exp={exp} position={index + 1} />
           ))}
