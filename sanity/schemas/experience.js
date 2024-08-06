@@ -4,6 +4,11 @@ export default {
   type: "document",
   fields: [
     {
+      name: "position",
+      title: "Position",
+      type: "number",
+    },
+    {
       name: "jobTitle",
       title: "JobTitle",
       type: "string",
@@ -19,7 +24,7 @@ export default {
     {
       name: "company",
       title: "Company",
-      type: "text",
+      type: "string",
     },
     {
       name: "dateStarted",
