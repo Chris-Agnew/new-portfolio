@@ -12,6 +12,7 @@ const BackToTop = () => {
           src="/images/chris-agnew-logo.webp"
           height={50}
           width={50}
+          style={{ width: "auto", height: "auto" }}
           alt="Chris Agnew logo"
           className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer object-cover"
         />
