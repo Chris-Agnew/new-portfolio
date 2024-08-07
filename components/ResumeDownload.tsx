@@ -10,7 +10,7 @@ export const ResumeDownload: React.FC = () => {
       aria-labelledby="Download CV PDF"
     >
       <a
-        href="/resume.pdf"
+        href="/Chris_Agnew_fullstack_react_resume.pdf"
         download="chris-agnew-fullstack-dev-resume"
         className="p-3 bg-[#F7AB0A]/80 rounded-lg"
       >
