@@ -15,7 +15,7 @@ const Projects = ({ projects }: Props) => {
   const { events } = useDraggable(ref); // Now we pass the reference to the useDraggable hook:
   return (
     <motion.div
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className=" relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0 mb-20"
       initial={{ opacity: 0, y: -300 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2 }}
@@ -49,8 +49,9 @@ const Projects = ({ projects }: Props) => {
                 src={urlFor(project.image).url()}
                 alt={project.title}
                 width={500}
-                height={500}
-                className="rounded-sm object-fill object-center"
+                height={800}
+                loading="lazy"
+                className="rounded-sm object-fill object-center h-auto w-auto"
               />
               <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-7xl">
                 <h4 className="text-lg md:text-4xl font-semibold text-center">
@@ -73,7 +74,12 @@ const Projects = ({ projects }: Props) => {
                         width={50}
                         height={50}
                         aria-label={tech.title}
+                        style={{
+                          width: "50px",
+                          height: "50px",
+                        }}
                         loading="lazy"
+                        className="object-contain object-center h-auto w-auto"
                       />
                     </span>
                   ))}
