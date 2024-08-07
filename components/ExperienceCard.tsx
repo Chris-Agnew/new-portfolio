@@ -37,6 +37,10 @@ const ExperienceCard = ({ exp, position }: Props) => {
           width={200}
           height={200}
           className="object-fill object-center rounded-full "
+          style={{
+            width: "auto",
+            height: "auto",
+          }}
           loading="lazy"
           quality={100}
         />
