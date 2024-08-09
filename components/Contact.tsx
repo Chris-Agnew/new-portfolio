@@ -17,7 +17,7 @@ const Contact = ({ pageInfo }: Props) => {
           Have a project you&apos;d like to discuss?
           <br />
         </h6>
-        <div className="space-y-10 flex flex-col ">
+        <div className="space-y-10 flex flex-col justify-center items-center">
           <div className="flex justify-center items-center space-x-5">
             <MapPinIcon
               className="text-[#8C83EC] h-7 w-7 animate-pulse"
