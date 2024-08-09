@@ -12,18 +12,18 @@ const Contact = ({ pageInfo }: Props) => {
       role="form"
       aria-label="contact-heading"
     >
-      <div className="flex flex-col space-y-10 ">
+      <div className="flex flex-col space-y-10 justify-center items-center">
         <h6 id="contact-heading" className="text-4xl font-semibold">
           Have a project you&apos;d like to discuss?
           <br />
         </h6>
-        <div className="space-y-10">
+        <div className="space-y-10 flex flex-col ">
           <div className="flex justify-center items-center space-x-5">
             <MapPinIcon
               className="text-[#8C83EC] h-7 w-7 animate-pulse"
               aria-hidden="true"
             />
-            <p className="text-2xl">Conneaut, Ohio</p>
+            <p className="text-2xl">Remote from Ohio</p>
           </div>
           <div className="flex justify-center items-center space-x-5">
             <EnvelopeIcon
