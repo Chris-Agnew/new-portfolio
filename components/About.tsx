@@ -16,8 +16,8 @@ const About = ({ pageInfo }: Props) => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         className="flex flex-col relative mb-12 text-left md:flex-row max-w-7xl mx-auto px-10 justify-evenly items-center"
+        aria-label="about-section"
         role="region"
-        aria-labelledby="about-heading"
       >
         <motion.div
           initial={{

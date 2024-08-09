@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <footer
       className="bg-[rgb(36,36,36)] text-white py-4 mt-8"
+      aria-label="Footer section"
       role="contentinfo"
     >
       <div className="container mx-auto flex flex-col justify-center items-center">

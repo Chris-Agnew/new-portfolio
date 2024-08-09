@@ -11,6 +11,7 @@ const Header = ({ socials }: Props) => {
   return (
     <header
       className=" top-0 p-5 flex justify-between max-w-7xl mx-auto z-20 items-start xl:items-center"
+      aria-label="Header section"
       role="banner"
     >
       <motion.div

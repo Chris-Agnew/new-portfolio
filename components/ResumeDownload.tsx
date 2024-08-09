@@ -7,12 +7,16 @@ export const ResumeDownload: React.FC = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      aria-labelledby="Download CV PDF"
+      aria-label="Link to download CV PDF"
+      role="region"
     >
       <a
         href="/Chris_Agnew_fullstack_react_resume.pdf"
         download="chris-agnew-fullstack-dev-resume"
         className="p-3 bg-[#F7AB0A]/80 rounded-lg"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Download CV PDF"
       >
         Download CV PDF
       </a>

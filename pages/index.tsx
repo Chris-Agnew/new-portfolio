@@ -33,23 +33,23 @@ const Home = ({ pageInfo, experience, projects, socials }: Props) => {
       <main className="bg-[rgb(36,36,36)] text-white h-screen overflow-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 font-nunito-sans">
         <Header socials={socials} />
 
-        <section id="hero" aria-labelledby="hero-section">
+        <section id="hero" aria-label="Hero section" role="region">
           <Hero pageInfo={pageInfo} />
         </section>
 
-        <section id="about" aria-labelledby="about-section">
+        <section id="about" aria-label="About section" role="region">
           <About pageInfo={pageInfo} />
         </section>
 
-        <section id="experience" aria-labelledby="experience-section">
+        <section id="experience" aria-label="Experience section" role="region">
           <WorkExperience experience={experience} />
         </section>
 
-        <section id="projects" aria-labelledby="projects-section">
+        <section id="projects" aria-label="projects-section" role="region">
           <Projects projects={projects} />
         </section>
 
-        <section id="contact" aria-labelledby="contact-section">
+        <section id="contact" aria-label="contact-section" role="region">
           <Contact pageInfo={pageInfo} />
         </section>
         <Footer />

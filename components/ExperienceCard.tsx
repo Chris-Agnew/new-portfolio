@@ -15,7 +15,6 @@ const ExperienceCard = ({ exp, position }: Props) => {
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-full max-w-[360px] md:max-w-[600px] xl:max-w-[900px] bg-[#292929] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 min-h-[500px] md:min-h-[600px] xl:min-h-[700px] overflow-auto mx-4"
       aria-labelledby={`experience-${exp._id}-title`}
       aria-posinset={position}
-      role="listitem"
     >
       <motion.div
         initial={{
