@@ -30,14 +30,14 @@ const ExperienceCard = ({ exp, position }: Props) => {
           y: 0,
         }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover xl:object-contain object-center"
+        className="w-32 h-32 rounded-full xl:w-[300px] xl:h-[300px] object-cover xl:object-cover object-center "
       >
         <Image
           src={urlFor(exp.companyImage).url()}
           alt={`${exp.company} logo`}
           width={200}
           height={200}
-          className="object-fill object-center rounded-full "
+          className="object-fill object-center  "
           style={{
             width: "auto",
             height: "auto",
