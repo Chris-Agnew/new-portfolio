@@ -37,16 +37,16 @@ const Hero = ({ pageInfo }: Props) => {
         className="rounded-full relative h-32 w-32 mx-auto object-cover"
       />
       <div className="z-20">
-        <h1 className="text-xl lg:text-6xl font-semibold px-10">
+        <p className="text-xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#8C83EC" />
-        </h1>
-        <h2
+        </p>
+        <h1
           id="hero-heading"
           className="text-xs md:text-sm uppercase text-gray-100 pb-2 tracking-widest  my-3"
         >
           {pageInfo?.role}
-        </h2>
+        </h1>
 
         <div className="pt-5">
           <Link href="#about">

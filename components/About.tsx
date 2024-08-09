@@ -38,18 +38,18 @@ const About = ({ pageInfo }: Props) => {
             src={urlFor(pageInfo?.heroImage).url()}
             alt="Photo of Chris Agnew in the office"
             loading="lazy"
-            width={400}
-            height={300}
+            width={300}
+            height={200}
             className="rounded-lg relative mx-auto object-cover"
           />
         </motion.div>
 
         <div className="space-y-10 px-0 md:px-10">
-          <h3 className="text-lg md:text-4xl font-semibold">
+          <h2 className="text-lg md:text-4xl font-semibold">
             Here is a{" "}
             <span className="underline decoration-[#8C83EC]/50">little</span>{" "}
             background
-          </h3>
+          </h2>
           <p className="text-base ">{pageInfo?.backgroundInformation}</p>
         </div>
       </motion.div>

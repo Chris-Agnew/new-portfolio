@@ -13,45 +13,45 @@ const Contact = ({ pageInfo }: Props) => {
       aria-label="contact-heading"
     >
       <div className="flex flex-col space-y-10 ">
-        <h4 id="contact-heading" className="text-4xl font-semibold">
+        <h6 id="contact-heading" className="text-4xl font-semibold">
           Have a project you&apos;d like to discuss?
           <br />
-        </h4>
+        </h6>
         <div className="space-y-10">
           <div className="flex justify-center items-center space-x-5">
             <MapPinIcon
               className="text-[#8C83EC] h-7 w-7 animate-pulse"
               aria-hidden="true"
             />
-            <h5 className="text-2xl">Conneaut, Ohio</h5>
+            <p className="text-2xl">Conneaut, Ohio</p>
           </div>
           <div className="flex justify-center items-center space-x-5">
             <EnvelopeIcon
               className="text-[#8C83EC] h-7 w-7 animate-pulse"
               aria-hidden="true"
             />
-            <h5 className="text-2xl">
+            <div className="text-2xl">
               <a
                 href="mailto:hello@chrisagnew.codes"
                 aria-label="Email Chris Agnew"
               >
                 hello@chrisagnew.codes
               </a>
-            </h5>
+            </div>
           </div>
           <div className="flex justify-center items-center space-x-5">
             <PhoneIcon
               className="text-[#8C83EC] h-7 w-7 animate-pulse"
               aria-hidden="true"
             />
-            <h5 className="text-2xl">
+            <div className="text-2xl">
               <a
                 href={`tel:${pageInfo?.phoneNumber}`}
                 aria-label="Call or Text Chris Agnew"
               >
                 {pageInfo?.phoneNumber}
               </a>
-            </h5>
+            </div>
           </div>
         </div>
       </div>

@@ -47,13 +47,13 @@ const ExperienceCard = ({ exp, position }: Props) => {
         />
       </motion.div>
       <div className="px-0 md:px-10">
-        <h4
+        <h3
           id={`experience-${exp._id}-title`}
-          className="text-md md:text-4xl font-semibold text-center"
+          className="text-md md:text-2xl font-semibold text-center"
         >
           {exp.jobTitle}
-        </h4>
-        <h4 className="font-light text-sm md:text-2xl mt-1 text-center">
+        </h3>
+        <h4 className="font-light text-sm md:text-xl mt-1 text-center">
           {exp.company}
         </h4>
         <div
