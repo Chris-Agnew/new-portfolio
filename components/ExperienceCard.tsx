@@ -52,9 +52,9 @@ const ExperienceCard = ({ exp, position }: Props) => {
         >
           {exp.jobTitle}
         </h4>
-        <p className="font-light text-sm md:text-2xl mt-1 text-center">
+        <h4 className="font-light text-sm md:text-2xl mt-1 text-center">
           {exp.company}
-        </p>
+        </h4>
         <div
           className="flex justify-center space-x-2 my-2"
           role="group"

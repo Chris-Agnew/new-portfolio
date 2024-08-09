@@ -30,7 +30,7 @@ const Projects = ({ projects }: Props) => {
         Projects
       </h3>
       <div
-        className="relative w-full flex overflow-x-scroll overflow-y-hidden z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#8C83EC]/80"
         role="list"
         {...events}
         ref={ref}
@@ -59,7 +59,7 @@ const Projects = ({ projects }: Props) => {
                     href={project.linkToBuild}
                     target="_blank"
                     rel="noreferrer"
-                    className="underline decoration-[#F7AB0A]/50"
+                    className="underline decoration-[#8C83EC]/50"
                     aria-label={`Link to case study for project ${i + 1}`}
                   >
                     Case Study {i + 1} of {projects.length} : {project.title}
@@ -94,7 +94,7 @@ const Projects = ({ projects }: Props) => {
           ))}
       </div>
 
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+      <div className="w-full absolute top-[30%] bg-[#8C83EC]/10 left-0 h-[500px] -skew-y-12" />
     </motion.div>
   );
 };

@@ -39,7 +39,7 @@ const Hero = ({ pageInfo }: Props) => {
       <div className="z-20">
         <h1 className="text-xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <Cursor cursorColor="#8C83EC" />
         </h1>
         <h2
           id="hero-heading"

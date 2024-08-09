@@ -20,14 +20,14 @@ const Contact = ({ pageInfo }: Props) => {
         <div className="space-y-10">
           <div className="flex justify-center items-center space-x-5">
             <MapPinIcon
-              className="text-[#F7Ab0A] h-7 w-7 animate-pulse"
+              className="text-[#8C83EC] h-7 w-7 animate-pulse"
               aria-hidden="true"
             />
             <h5 className="text-2xl">Conneaut, Ohio</h5>
           </div>
           <div className="flex justify-center items-center space-x-5">
             <EnvelopeIcon
-              className="text-[#F7Ab0A] h-7 w-7 animate-pulse"
+              className="text-[#8C83EC] h-7 w-7 animate-pulse"
               aria-hidden="true"
             />
             <h5 className="text-2xl">
@@ -41,7 +41,7 @@ const Contact = ({ pageInfo }: Props) => {
           </div>
           <div className="flex justify-center items-center space-x-5">
             <PhoneIcon
-              className="text-[#F7Ab0A] h-7 w-7 animate-pulse"
+              className="text-[#8C83EC] h-7 w-7 animate-pulse"
               aria-hidden="true"
             />
             <h5 className="text-2xl">

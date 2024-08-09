@@ -36,7 +36,7 @@ const About = ({ pageInfo }: Props) => {
         >
           <Image
             src={urlFor(pageInfo?.heroImage).url()}
-            alt="Chris Agnew Headshot"
+            alt="Photo of Chris Agnew in the office"
             loading="lazy"
             width={400}
             height={300}
@@ -47,7 +47,7 @@ const About = ({ pageInfo }: Props) => {
         <div className="space-y-10 px-0 md:px-10">
           <h3 className="text-lg md:text-4xl font-semibold">
             Here is a{" "}
-            <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
+            <span className="underline decoration-[#8C83EC]/50">little</span>{" "}
             background
           </h3>
           <p className="text-base ">{pageInfo?.backgroundInformation}</p>
