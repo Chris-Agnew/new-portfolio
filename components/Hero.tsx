@@ -3,6 +3,7 @@ import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
 import Link from "next/link";
 import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
 type Props = {
   pageInfo: PageInfo;
@@ -28,7 +29,7 @@ const Hero = ({ pageInfo }: Props) => {
     >
       <BackgroundCircles />
       <Image
-        src="/images/chris-profile.webp"
+        src={urlFor(pageInfo?.profilePic).url()}
         priority
         width={200}
         height={200}

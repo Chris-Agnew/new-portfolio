@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { PageInfo } from "../typings";
 import { ResumeDownload } from "./ResumeDownload";
+import Image from "next/image";
+import { urlFor } from "../sanity";
 
 type Props = {
   pageInfo: PageInfo;
@@ -17,8 +19,7 @@ const About = ({ pageInfo }: Props) => {
         role="region"
         aria-labelledby="about-heading"
       >
-        <motion.img
-          src="/images/chris-agnew-headshot.webp"
+        <motion.div
           initial={{
             x: -200,
             opacity: 0,
@@ -31,10 +32,18 @@ const About = ({ pageInfo }: Props) => {
             duration: 1.5,
           }}
           viewport={{ once: true }}
-          className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 object-cover rounded-full md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[500px] hidden md:flex"
-          alt="Chris Agnew Headshot"
-          loading="lazy"
-        />
+          className="-mb-20 md:mb-0 flex-shrink-0 w-full h-full md:justify-center md:items-center  object-cover rounded-full md:rounded-lg xl:w-[500px] xl:h-[500px] hidden md:flex"
+        >
+          <Image
+            src={urlFor(pageInfo?.heroImage).url()}
+            alt="Chris Agnew Headshot"
+            loading="lazy"
+            width={400}
+            height={300}
+            className="rounded-lg relative mx-auto object-cover"
+          />
+        </motion.div>
+
         <div className="space-y-10 px-0 md:px-10">
           <h3 className="text-lg md:text-4xl font-semibold">
             Here is a{" "}
