@@ -35,8 +35,8 @@ const Header = ({ socials }: Props) => {
             url={social.link}
             fgColor="white"
             bgColor="transparent"
-            key={social._id}
             label={`Link to ${social.title}`}
+            className=" hover:bg-purple-500 cursor-pointer rounded-b-full"
           />
         ))}
       </motion.div>
