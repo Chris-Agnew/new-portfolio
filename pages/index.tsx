@@ -50,7 +50,7 @@ const Home = ({ pageInfo, experience, projects, socials }: Props) => {
         </section>
 
         <section id="contact" aria-labelledby="contact-section">
-          <Contact />
+          <Contact pageInfo={pageInfo} />
         </section>
         <Footer />
         <BackToTop />

@@ -1,6 +1,11 @@
 import { MapPinIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { PageInfo } from "../typings";
 
-const Contact = () => {
+type Props = {
+  pageInfo: PageInfo;
+};
+
+const Contact = ({ pageInfo }: Props) => {
   return (
     <div
       className="relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 xl:my-10 justify-evenly mx-auto items-center"
@@ -40,8 +45,11 @@ const Contact = () => {
               aria-hidden="true"
             />
             <p className="text-2xl">
-              <a href="tel:4405306474" aria-label="Call or Text Chris Agnew">
-                (440) 530-6474 Call/Text
+              <a
+                href={`tel:${pageInfo?.phoneNumber}`}
+                aria-label="Call or Text Chris Agnew"
+              >
+                {pageInfo?.phoneNumber}
               </a>
             </p>
           </div>
