@@ -14,7 +14,7 @@ const Contact = ({ pageInfo }: Props) => {
     >
       <div className="flex flex-col space-y-10 justify-center items-center">
         <h6 id="contact-heading" className="text-4xl font-semibold">
-          Have a project you&apos;d like to discuss?
+          Want to hire me? Let's talk!
           <br />
         </h6>
         <div className="space-y-10 flex flex-col justify-center items-center">
@@ -35,21 +35,7 @@ const Contact = ({ pageInfo }: Props) => {
                 href="mailto:hello@chrisagnew.codes"
                 aria-label="Email Chris Agnew"
               >
-                hello@chrisagnew.codes
-              </a>
-            </div>
-          </div>
-          <div className="flex justify-center items-center space-x-5">
-            <PhoneIcon
-              className="text-[#8C83EC] h-7 w-7 animate-pulse"
-              aria-hidden="true"
-            />
-            <div className="text-2xl">
-              <a
-                href={`tel:${pageInfo?.phoneNumber}`}
-                aria-label="Call or Text Chris Agnew"
-              >
-                {pageInfo?.phoneNumber}
+                chris@chrisagnew.codes
               </a>
             </div>
           </div>
