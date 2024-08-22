@@ -17,7 +17,7 @@ const Seo = ({ title, description }: Props) => {
         description: description,
         images: [
           {
-            url: "/images/chris-agnew-llc-og.webp",
+            url: "/images/chris-agnew-og.gif",
             width: 1200,
             height: 630,
             alt: "Chris Agnew LLC Company Logo",
@@ -25,11 +25,6 @@ const Seo = ({ title, description }: Props) => {
           },
         ],
         site_name: "Chris Agnew LLC | Full-Stack React Developer",
-      }}
-      twitter={{
-        handle: "@handle",
-        site: "@site",
-        cardType: "summary_large_image",
       }}
     />
   );
