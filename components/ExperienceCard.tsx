@@ -30,21 +30,18 @@ const ExperienceCard = ({ exp, position }: Props) => {
           y: 0,
         }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full xl:w-[300px] xl:h-[300px] object-cover xl:object-cover object-center "
+        className="w-32 h-32 rounded-full  object-cover xl:object-cover object-center "
       >
-        <Image
-          src={urlFor(exp.companyImage).url()}
-          alt={`${exp.company} logo`}
-          width={200}
-          height={200}
-          className="object-fill object-center  "
-          style={{
-            width: "auto",
-            height: "auto",
-          }}
-          loading="lazy"
-          quality={100}
-        />
+        <div className="flex justify-center items-center ">
+          <Image
+            src={urlFor(exp.companyImage).url()}
+            alt={`${exp.company} logo`}
+            width={200}
+            height={200}
+            className="object-fill object-center  "
+            loading="lazy"
+          />
+        </div>
       </motion.div>
       <div className="px-0 md:px-10">
         <h3
@@ -87,7 +84,10 @@ const ExperienceCard = ({ exp, position }: Props) => {
                 month: "short",
               })}
         </p>
-        <ul className="list-disc space-y-4 ml-5 md:text-lg" role="list">
+        <ul
+          className="list-disc space-y-1 xl:space-y-4 ml-5 text-xs md:text-lg"
+          role="list"
+        >
           {exp.points &&
             exp.points.map((point: string, i: number) => (
               <li key={i} role="listitem">
