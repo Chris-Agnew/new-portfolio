@@ -56,7 +56,7 @@ const Projects = ({ projects }: Props) => {
                 />
               </div>
               <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-7xl w-full h-1/2">
-                <h5 className="text-lg md:text-4xl font-semibold text-center">
+                <h4 className="text-lg md:text-4xl font-semibold text-center">
                   <a
                     href={project.linkToBuild}
                     target="_blank"
@@ -66,7 +66,7 @@ const Projects = ({ projects }: Props) => {
                   >
                     Case Study {i + 1} of {projects.length} : {project.title}
                   </a>
-                </h5>
+                </h4>
                 <div className="flex justify-center items-center">
                   {project?.technologies.map((tech) => (
                     <span key={tech._id} className="px-1">

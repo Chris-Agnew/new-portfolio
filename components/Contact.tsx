@@ -13,10 +13,10 @@ const Contact = ({ pageInfo }: Props) => {
       aria-label="contact-heading"
     >
       <div className="flex flex-col space-y-10 justify-center items-center">
-        <h6 id="contact-heading" className="text-4xl font-semibold">
+        <h5 id="contact-heading" className="text-4xl font-semibold">
           Want to hire me? Let's talk!
           <br />
-        </h6>
+        </h5>
         <div className="space-y-10 flex flex-col justify-center items-center">
           <div className="flex justify-center items-center space-x-5">
             <MapPinIcon
