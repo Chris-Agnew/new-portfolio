@@ -40,20 +40,22 @@ const Projects = ({ projects }: Props) => {
 
           .map((project, i) => (
             <div
-              className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+              className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-auto"
               key={i}
               role="listitem"
               aria-label={`Project ${i + 1}: ${project.title}`}
             >
-              <Image
-                src={urlFor(project.image).url()}
-                alt={project.title}
-                width={500}
-                height={800}
-                loading="lazy"
-                className="rounded-sm object-fill object-center h-auto w-auto"
-              />
-              <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-7xl">
+              <div className="w-[300px] lg:w-[500px] h-[200px] lg:h-[400px] rounded-sm object-fill object-center ">
+                <Image
+                  src={urlFor(project.image).url()}
+                  alt={project.title}
+                  width={500}
+                  height={800}
+                  loading="lazy"
+                  className="rounded-sm object-fill object-center h-auto w-auto"
+                />
+              </div>
+              <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-7xl w-full h-1/2">
                 <h5 className="text-lg md:text-4xl font-semibold text-center">
                   <a
                     href={project.linkToBuild}
@@ -67,17 +69,13 @@ const Projects = ({ projects }: Props) => {
                 </h5>
                 <div className="flex justify-center items-center">
                   {project?.technologies.map((tech) => (
-                    <span key={tech._id} className="px-2">
+                    <span key={tech._id} className="px-1">
                       <Image
                         src={urlFor(tech.image).url()}
                         alt={tech.title}
-                        width={50}
-                        height={50}
+                        width={35}
+                        height={35}
                         aria-label={tech.title}
-                        style={{
-                          width: "50px",
-                          height: "50px",
-                        }}
                         loading="lazy"
                         className="object-contain object-center h-auto w-auto"
                       />
@@ -85,9 +83,14 @@ const Projects = ({ projects }: Props) => {
                   ))}
                 </div>
                 {project.summary.split("\n").map((text, index) => (
-                  <p className="text-xs md:text-lg md:text-left" key={index}>
-                    {text}
-                  </p>
+                  <div
+                    className="flex flex-col justify-center items-center "
+                    key={index}
+                  >
+                    <p className="text-xs md:text-lg md:text-left lg:w-3/4">
+                      {text}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
