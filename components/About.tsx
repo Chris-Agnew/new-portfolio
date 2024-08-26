@@ -35,8 +35,8 @@ const About = ({ pageInfo }: Props) => {
           className="-mb-20 md:mb-0 flex-shrink-0 w-full h-full md:justify-center md:items-center  object-cover rounded-full md:rounded-lg xl:w-[500px] xl:h-[500px] hidden md:flex"
         >
           <Image
-            src="/images/chris-profile.webp"
-            alt="Photo of Chris Agnew in the office"
+            src={urlFor(pageInfo?.profilePic).url()}
+            alt="Chris Agnew headshot"
             loading="lazy"
             width={300}
             height={200}
