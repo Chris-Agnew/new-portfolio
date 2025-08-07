@@ -11,7 +11,7 @@ export const ResumeDownload: React.FC = () => {
       role="region"
     >
       <a
-        href="/chris-agnew-ecom.pdf"
+        href="/resume.pdf"
         download="chris-agnew-ecom-specialist-resume"
         className="p-3 bg-[#8C83EC]/80 rounded-lg"
         target="_blank"
