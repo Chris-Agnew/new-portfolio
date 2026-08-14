@@ -50,7 +50,16 @@ const About = ({ pageInfo }: Props) => {
             <span className="underline decoration-[#8C83EC]/50">little</span>{" "}
             background
           </h2>
-          <p className="text-base ">{pageInfo?.backgroundInformation}</p>
+          <div className="space-y-4">
+            {pageInfo?.backgroundInformation
+              ?.split("\n")
+              .filter((para) => para.trim())
+              .map((para, i) => (
+                <p className="text-base" key={i}>
+                  {para}
+                </p>
+              ))}
+          </div>
         </div>
       </motion.div>
       <ResumeDownload />
