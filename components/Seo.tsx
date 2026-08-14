@@ -10,21 +10,21 @@ const Seo = ({ title, description }: Props) => {
     <NextSeo
       title={title}
       description={description}
-      canonical="https://chrisagnew.codes"
+      canonical="https://www.chris-agnew.com/"
       openGraph={{
-        url: "https://chrisagnew.codes",
+        url: "https://www.chris-agnew.com/",
         title: title,
         description: description,
         images: [
           {
-            url: "/images/chris-agnew-og.gif",
+            url: "https://www.chris-agnew.com/images/chris-agnew-og.png",
             width: 1200,
             height: 630,
-            alt: "Chris Agnew LLC Company Logo",
-            type: "image/jpeg",
+            alt: "Chris Agnew: E-Commerce Operations, Onboarding & Implementation",
+            type: "image/png",
           },
         ],
-        site_name: "Chris Agnew LLC | Full-Stack React Developer",
+        site_name: "Chris Agnew LLC",
       }}
     />
   );
