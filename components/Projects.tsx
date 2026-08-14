@@ -57,15 +57,21 @@ const Projects = ({ projects }: Props) => {
               </div>
               <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-7xl w-full h-1/2">
                 <h4 className="text-lg md:text-4xl font-semibold text-center">
-                  <a
-                    href={project.linkToBuild}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline decoration-[#8C83EC]/50"
-                    aria-label={`Link to case study for project ${i + 1}`}
-                  >
-                    Case Study {i + 1} of {projects.length} : {project.title}
-                  </a>
+                  {project.linkToBuild ? (
+                    <a
+                      href={project.linkToBuild}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline decoration-[#8C83EC]/50"
+                      aria-label={`${project.title}, opens in a new tab`}
+                    >
+                      Case Study {i + 1} of {projects.length} : {project.title}
+                    </a>
+                  ) : (
+                    <span>
+                      Case Study {i + 1} of {projects.length} : {project.title}
+                    </span>
+                  )}
                 </h4>
                 <div className="flex justify-center items-center">
                   {project?.technologies.map((tech) => (
