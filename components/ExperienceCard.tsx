@@ -33,14 +33,16 @@ const ExperienceCard = ({ exp, position }: Props) => {
         className="w-32 h-32 rounded-full  object-cover xl:object-cover object-center "
       >
         <div className="flex justify-center items-center ">
-          <Image
-            src={urlFor(exp.companyImage).url()}
-            alt={`${exp.company} logo`}
-            width={200}
-            height={200}
-            className="object-fill object-center  "
-            loading="lazy"
-          />
+          {exp.companyImage && (
+            <Image
+              src={urlFor(exp.companyImage).url()}
+              alt={`${exp.company} logo`}
+              width={200}
+              height={200}
+              className="object-fill object-center  "
+              loading="lazy"
+            />
+          )}
         </div>
       </motion.div>
       <div className="px-0 md:px-10">
@@ -58,16 +60,18 @@ const ExperienceCard = ({ exp, position }: Props) => {
           role="group"
           aria-label="Technologies used"
         >
-          {exp.technologies.map((tech) => (
+          {exp.technologies?.map((tech) => (
             <span key={tech._id} className="px-2">
-              <Image
-                src={urlFor(tech.image).url()}
-                width={50}
-                height={50}
-                alt={tech.title}
-                className="object-contain object-center"
-                loading="lazy"
-              />
+              {tech.image && (
+                <Image
+                  src={urlFor(tech.image).url()}
+                  width={50}
+                  height={50}
+                  alt={tech.title}
+                  className="object-contain object-center"
+                  loading="lazy"
+                />
+              )}
             </span>
           ))}
         </div>

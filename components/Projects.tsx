@@ -46,14 +46,16 @@ const Projects = ({ projects }: Props) => {
               aria-label={`Project ${i + 1}: ${project.title}`}
             >
               <div className="w-[300px] lg:w-[500px] h-[200px] lg:h-[400px] rounded-sm object-fill object-center ">
-                <Image
-                  src={urlFor(project.image).url()}
-                  alt={project.title}
-                  width={500}
-                  height={800}
-                  loading="lazy"
-                  className="rounded-sm object-fill object-center h-auto w-auto"
-                />
+                {project.image && (
+                  <Image
+                    src={urlFor(project.image).url()}
+                    alt={project.title}
+                    width={500}
+                    height={800}
+                    loading="lazy"
+                    className="rounded-sm object-fill object-center h-auto w-auto"
+                  />
+                )}
               </div>
               <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-7xl w-full h-1/2">
                 <h4 className="text-lg md:text-4xl font-semibold text-center">
@@ -74,21 +76,23 @@ const Projects = ({ projects }: Props) => {
                   )}
                 </h4>
                 <div className="flex justify-center items-center">
-                  {project?.technologies.map((tech) => (
+                  {project?.technologies?.map((tech) => (
                     <span key={tech._id} className="px-1">
-                      <Image
-                        src={urlFor(tech.image).url()}
-                        alt={tech.title}
-                        width={35}
-                        height={35}
-                        aria-label={tech.title}
-                        loading="lazy"
-                        className="object-contain object-center h-auto w-auto"
-                      />
+                      {tech.image && (
+                        <Image
+                          src={urlFor(tech.image).url()}
+                          alt={tech.title}
+                          width={35}
+                          height={35}
+                          aria-label={tech.title}
+                          loading="lazy"
+                          className="object-contain object-center h-auto w-auto"
+                        />
+                      )}
                     </span>
                   ))}
                 </div>
-                {project.summary.split("\n").map((text, index) => (
+                {project.summary?.split("\n").map((text, index) => (
                   <div
                     className="flex flex-col justify-center items-center "
                     key={index}
