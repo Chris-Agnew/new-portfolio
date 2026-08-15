@@ -7,19 +7,18 @@
   "author": "Chris Agnew <chris@chris-agnew.com>",
   "license": "UNLICENSED",
   "scripts": {
+    "dev": "sanity dev",
     "start": "sanity start",
-    "build": "sanity build"
+    "build": "sanity build",
+    "deploy": "sanity deploy"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/data-aspects": "^2.35.3",
     "@sanity/eslint-config-studio": "^4.0.0",
-    "@sanity/form-builder": "^2.36.2",
     "@sanity/vision": "^3.55.0",
     "eslint": "^9.9.1",
-    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sanity": "^3.55.0",
