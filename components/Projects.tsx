@@ -45,15 +45,15 @@ const Projects = ({ projects }: Props) => {
               role="listitem"
               aria-label={`Project ${i + 1}: ${project.title}`}
             >
-              <div className="w-[300px] lg:w-[500px] h-[200px] lg:h-[400px] rounded-sm object-fill object-center ">
+              <div className="w-[300px] lg:w-[500px] rounded-sm overflow-hidden">
                 {project.image && (
                   <Image
                     src={urlFor(project.image).url()}
                     alt={project.title}
-                    width={500}
+                    width={1000}
                     height={800}
                     loading="lazy"
-                    className="rounded-sm object-fill object-center h-auto w-auto"
+                    className="w-full h-auto rounded-sm"
                   />
                 )}
               </div>
