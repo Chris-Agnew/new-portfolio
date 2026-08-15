@@ -25,8 +25,8 @@ const Home = ({ pageInfo, experience, projects, socials }: Props) => {
       <GoogleTagManager gtmId="GTM-M9J75R27" />
 
       <Seo
-        title="Chris Agnew | Full-Stack React Developer "
-        description="Discover Chris Agnew, a Full-Stack Next.js Developer based in Cleveland, Ohio who creates high performing websites/web apps that are user friendly and accessible."
+        title="Chris Agnew | E-Commerce Operations, Onboarding & Implementation"
+        description="Chris Agnew works in multichannel e-commerce: catalog and product data, marketplace integrations across Shopify, Amazon and Walmart, inventory and pricing logic, and the automation that removes the manual parts."
       />
       <link rel="icon" href="/favicon.ico" />
       <main className="bg-[rgb(36,36,36)] text-white h-screen overflow-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#8C83EC]/80 font-nunito-sans">
