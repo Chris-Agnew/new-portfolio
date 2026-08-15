@@ -11,7 +11,7 @@ type Props = {
 
 const Projects = ({ projects }: Props) => {
   const ref =
-    useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
+    useRef<HTMLDivElement>(undefined) as React.MutableRefObject<HTMLInputElement>;
   const { events } = useDraggable(ref); // Now we pass the reference to the useDraggable hook:
   return (
     <motion.div
