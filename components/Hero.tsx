@@ -13,10 +13,10 @@ const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
       `Hi, My Name is ${pageInfo?.name}`,
-      "Shopify Specialist",
-      "Tailwind CSS Lover",
-      "Accessibility Advocate",
-      "E-commerce Developer",
+      "Shopify, Amazon & Walmart",
+      "Catalog & product data",
+      "Marketplace integrations",
+      "Performance & accessibility",
     ],
     loop: true,
     delaySpeed: 2000,
