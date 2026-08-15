@@ -9,7 +9,6 @@ import WorkExperience from "../components/WorkExperience";
 import Seo from "../components/Seo";
 import { Experience, PageInfo, Project, Social } from "../typings";
 import { sanityClient } from "../sanity";
-import { groq } from "next-sanity";
 import Footer from "../components/Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
 
@@ -26,8 +25,8 @@ const Home = ({ pageInfo, experience, projects, socials }: Props) => {
       <GoogleTagManager gtmId="GTM-M9J75R27" />
 
       <Seo
-        title="Chris Agnew | E-Commerce Operations, Onboarding & Implementation"
-        description="Chris Agnew works in multichannel e-commerce: catalog and product data, marketplace integrations across Shopify, Amazon and Walmart, inventory and pricing logic, and the automation that removes the manual parts."
+        title="Chris Agnew | Full-Stack React Developer "
+        description="Discover Chris Agnew, a Full-Stack Next.js Developer based in Cleveland, Ohio who creates high performing websites/web apps that are user friendly and accessible."
       />
       <link rel="icon" href="/favicon.ico" />
       <main className="bg-[rgb(36,36,36)] text-white h-screen overflow-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#8C83EC]/80 font-nunito-sans">
@@ -63,16 +62,16 @@ export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   // queries
-  const experienceQuery = groq`*[_type == "experience"]{
+  const experienceQuery = `*[_type == "experience"]{
   ...,
   technologies[]->
 }`;
-  const pageInfoQuery = groq`*[_type == "pageInfo"][0]`;
-  const projectsQuery = groq`*[_type == "project"]{
+  const pageInfoQuery = `*[_type == "pageInfo"][0]`;
+  const projectsQuery = `*[_type == "project"]{
   ...,
   technologies[]->
 }`;
-  const socialsQuery = groq`*[_type == "social"]`;
+  const socialsQuery = `*[_type == "social"]`;
 
   const pageInfo: PageInfo = await sanityClient.fetch(pageInfoQuery);
   const experience: Experience[] = await sanityClient.fetch(experienceQuery);
